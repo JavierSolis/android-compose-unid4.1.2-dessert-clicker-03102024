@@ -19,6 +19,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
 }
 
+
 android {
     namespace = "com.example.dessertclicker"
     compileSdk = 34
@@ -65,6 +66,7 @@ android {
     }
 }
 
+val lifecycle_version = "2.5.1"
 dependencies {
 
     implementation(platform("androidx.compose:compose-bom:2024.02.00"))
@@ -78,4 +80,6 @@ dependencies {
 
     debugImplementation("androidx.compose.ui:ui-test-manifest")
     debugImplementation("androidx.compose.ui:ui-tooling")
+
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_version")
 }
